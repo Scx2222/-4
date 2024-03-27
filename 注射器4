@@ -1,0 +1,28 @@
+#include<iostream>
+using namespace std;
+#include<string>
+
+int main()
+{
+	//注射剂量设为一个数组
+	string group[5] = { "0.8/1ml" ,"2/3ml" ,"3/3ml","4/5ml","5/5ml"};
+	float num;
+
+	//实际药液容量设为一个数组
+	float sum[5] = { 0.8 ,2 ,3 ,4 ,5};
+	//从10~180不同的注射次数的单次注射剂量
+	for (int j = 0; j < 5; j++)
+	{
+		for (int i = 10; i < 190; i += 10)
+		{
+			num = sum[j] / i;
+			cout << "注射剂量选择：" << group[j] << endl;
+			cout << "注射次数为： " << i << endl;
+			cout << "则单次注射剂量为：" << num << endl;
+			cout << endl;
+		}
+	}
+
+	system("pause");
+	return 0;
+}
